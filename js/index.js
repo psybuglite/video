@@ -32,6 +32,8 @@ var mainpic = document.querySelector(".main-pic");
 const subs = videolist.querySelector(".subs");
 const name = videolist.querySelector(".name");
 const title = videolist.querySelector(".title");
+const source = player.querySelector("source");
+
 
 //create the funtions that will work
 
@@ -204,12 +206,7 @@ window.onscroll = function() {
     }
 };
 
-var source = document.createElement('source');
-
-source.setAttribute('src', 'vid/Edsheeran.mp4');
 mainpic.setAttribute("src", "img/edpropic.jpg");
-
-video.appendChild(source);
 
 function playStar() {
 
