@@ -191,50 +191,18 @@ nav .logo img {
     width: 100%;
 }
 
-.bottom .cc {
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    position: relative;
-}
-
-.bottom .cc button {
-    font-size: 11px;
-    padding: 1px 6.5px;
-    width: 100%;
-}
-
-.bottom .cc button i {
-    font-size: 16px;
-}
-
-.bottom .cc .captions {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    padding-top: 10px;
-    background-color: rgba(85, 85, 85, 0.5);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.bottom .cc .captions button {
-    font-size: 6px;
-    padding: 5px 7px;
-    border-bottom: 1px solid rgba(85, 85, 85, 0.5);
-    width: 100%;
-}
-
 .bottom .time {
     font-size: 13px;
     margin: 11px 5px 0px 5px;
     font-weight: lighter;
 }
 
-.bottom .skip,
-.bottom .volume,
-.bottom .cc {
-    margin: 8px 0px 0px 5px;
+.bottom .skip {
+    margin: 9px 5px 0px 5px;
+}
+
+.bottom .skip i {
+    font-size: 13px;
 }
 
 .bottom .time {
@@ -257,12 +225,17 @@ nav .logo img {
     width: 20px;
 }
 
+.bottom .play {
+    margin: 2px 5px 0px 5px;
+}
+
 .bottom .play i {
-    font-size: 24px;
+    font-size: 16px;
     margin-top: 7px;
 }
 
 .bottom .volume {
+    margin: 9px 4px 0px 4px;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -549,6 +522,8 @@ video::-webkit-media-controls {
     -ms-flex-item-align: center;
     align-self: center;
     width: 48%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 
 .videos .videolist .video-file img {

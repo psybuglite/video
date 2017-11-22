@@ -36,7 +36,7 @@ const title = videolist.querySelector(".title");
 //create the funtions that will work
 
 function playIcons() {
-    video.paused ? play.innerHTML = '<i class="material-icons">play_arrow</i>' : play.innerHTML = '<i class="material-icons">pause</i>';
+    video.paused ? play.innerHTML = '<i class="fa fa-play"></i>' : play.innerHTML = '<i class="fa fa-pause"></i>';
 }
 playIcons();
 
@@ -111,16 +111,6 @@ function volumeHover() {
         //console.log("hi");
         volumeScrub.style.display = "none";
         volume.style.background = "transparent";
-    }
-}
-
-function ccHover() {
-    if (captions.style.display == "none") {
-        captions.style.display = "block";
-        cc.style.background = "rgba(85, 85, 85, 0.5)";
-    } else {
-        captions.style.display = "none";
-        cc.style.background = "transparent";
     }
 }
 
@@ -220,7 +210,7 @@ source.setAttribute('src', 'vid/Edsheeran.mp4');
 mainpic.setAttribute("src", "img/edpropic.jpg");
 
 video.appendChild(source);
-//video.play();
+video.play();
 
 function playStar() {
 
@@ -278,7 +268,6 @@ volumeRange.addEventListener("change", volumeUpdate);
 volumeRange.addEventListener("mousemove", volumeUpdate);
 
 volume.addEventListener("click", volumeHover);
-cc.addEventListener("click", ccHover);
 
 fullscreen.addEventListener("click", full);
 document.addEventListener("keypress", (e) => {

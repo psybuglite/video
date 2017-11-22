@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Player</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
@@ -25,7 +24,7 @@
             </div>
         </div>
         <div class="menu">
-            <i class="material-icons">menu</i>
+            <i class="fa fa-bars"></i>
         </div>
     </nav>
 
@@ -37,7 +36,7 @@
             <video class="player-video viewer" fullscreenEnabled></video>
 
             <div class="bottom">
-                <div><button class="play"><i class="material-icons" style="font-size:5px">play_arrow</i></button></div>
+                <div><button class="play"><i class="fa fa-play" style="font-size:5px"></i></button></div>
                 <div class="progress">
                     <div class="progress-filled"></div>
                     <div class="point">
@@ -45,21 +44,11 @@
                     </div>
                 </div>
                 <div><button class="time">15:56</button></div>
-                <div><button data-skip="10" class="skip"><i class="material-icons">fast_forward</i></button></div>
+                <div><button data-skip="10" class="skip"><i class="fa fa-fast-forward"></i></button></div>
                 <div class="volume">
-                    <button><i class="material-icons">volume_up</i></button>
+                    <button><i class="fa fa-volume-up"></i></button>
                     <div class="volume-scrub" style="display:none">
                         <input type="range" orient="vertical" name="volume" class="volume-slider" min="0" max="1" step="0.05" value="1" />
-                    </div>
-                </div>
-                <div class="cc">
-                    <button>
-                            <i class="material-icons">closed_caption</i>
-                          </button>
-                    <div class="captions" style="display:none">
-                        <button>ENG</button>
-                        <br>
-                        <button>None</button>
                     </div>
                 </div>
                 <div class="expand">
@@ -85,9 +74,9 @@
             <div class="social">
                 <div class="title">Shape Of You</div>
                 <div class="buttons">
-                    <div><button class="thumb"><i class="material-icons">thumb_up</i></button></div>
-                    <div><button class="thumb"><i class="material-icons">thumb_down</i></button></div>
-                    <div><button><i class="material-icons">add</i></button></div>
+                    <div><button class="thumb"><i class="fa fa-thumbs-up"></i></button></div>
+                    <div><button class="thumb"><i class="fa fa-thumbs-down"></i></button></div>
+                    <div><button><i class="fa fa-plus"></i></button></div>
                 </div>
             </div>
         </div>
