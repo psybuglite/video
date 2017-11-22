@@ -81,7 +81,7 @@ nav .logo img {
 
 .bottom {
     z-index: 2900;
-    padding: 2px;
+    padding: 4px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -198,7 +198,7 @@ nav .logo img {
 }
 
 .bottom .skip {
-    margin: 9px 5px 0px 5px;
+    margin: 9px 8px 0px 8px;
 }
 
 .bottom .skip i {
@@ -226,7 +226,7 @@ nav .logo img {
 }
 
 .bottom .play {
-    margin: 2px 5px 0px 5px;
+    margin: 2px 8px 0px 8px;
 }
 
 .bottom .play i {
@@ -235,7 +235,7 @@ nav .logo img {
 }
 
 .bottom .volume {
-    margin: 9px 4px 0px 4px;
+    margin: 9px 7px 0px 7px;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;

@@ -210,7 +210,6 @@ source.setAttribute('src', 'vid/Edsheeran.mp4');
 mainpic.setAttribute("src", "img/edpropic.jpg");
 
 video.appendChild(source);
-video.play();
 
 function playStar() {
 
