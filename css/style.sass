@@ -390,13 +390,16 @@ video::-webkit-media-controls
             color: white
 
   .videolist
-    display: flex
+    display: block
     justify-content: space-around
-    flex-wrap: wrap
     width: 100%
     padding: 10px 5px
     border: 1px solid #a7a9ac
     border-radius: 5px
+
+    .vids
+      display: flex
+      justify-content: space-around
 
     .video-file
       position: relative
@@ -477,5 +480,6 @@ video::-webkit-media-controls
             i
               font-size: 25px
     .videolist
+      display: flex
       .video-file
-        width: 30%
+        width: 48%
