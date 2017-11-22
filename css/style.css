@@ -1,557 +1,634 @@
 @import url("https://fonts.googleapis.com/css?family=Exo");
 html {
-  box-sizing: border-box;
-  font-family: 'Exo', sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 body {
-  background: #d1d3d4;
+    background: #d1d3d4;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 10px;
-  background: #0fc6de;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background: #0fc6de;
 }
 
 nav .menu {
-  color: white;
+    color: white;
 }
 
 nav .logo {
-  color: white;
-  display: flex;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 nav .logo img {
-  width: 20px;
-  margin-left: 3px;
+    width: 20px;
+    margin-left: 3px;
 }
 
 .sticky {
-  width: 60%;
-  margin: 0 auto;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .stick {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 3000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 3000;
 }
 
 .player {
-  max-width: 100%;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  position: relative;
-  font-size: 0;
-  overflow: hidden;
+    max-width: 100%;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    font-size: 0;
+    overflow: hidden;
 }
 
 .player-video {
-  width: 100%;
+    width: 100%;
 }
 
 .rel {
-  position: relative;
+    position: relative;
 }
 
 .bottom {
-  z-index: 2900;
-  padding: 2px;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  transition: all .9s;
-  color: black;
-  justify-content: space-between;
-  align-content: cemter;
-  background: rgba(0, 0, 0, 0.3);
+    z-index: 2900;
+    padding: 2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    -webkit-transition: all .9s;
+    transition: all .9s;
+    color: black;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-line-pack: cemter;
+    align-content: cemter;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .bottom button {
-  background: none;
-  border: 0;
-  color: white;
-  outline: none;
+    background: none;
+    border: 0;
+    color: white;
+    outline: none;
 }
 
 .bottom .progress:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .bottom .progress {
-  width: 75%;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.3);
-  margin-top: 17px;
-  position: relative;
-  display: flex;
-  margin-right: 10px;
+    width: 75%;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.3);
+    margin-top: 17px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 10px;
 }
 
 .bottom .progress .point {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  top: -120%;
-  border-radius: 50%;
-  background: white;
-  margin-left: 0%;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -120%;
+    border-radius: 50%;
+    background: white;
+    margin-left: 0%;
 }
 
 .bottom .progress .point:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .bottom .progress .timer {
-  margin-left: -11px;
-  margin-bottom: 8px;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  padding: 2px 6px;
-  border-radius: 20px;
-  background-color: rgba(85, 85, 85, 0.5);
+    margin-left: -11px;
+    margin-bottom: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    padding: 2px 6px;
+    border-radius: 20px;
+    background-color: rgba(85, 85, 85, 0.5);
 }
 
 .bottom .progress .timer button {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .bottom .progress .progress-filled {
-  width: 50%;
-  background: #0fc6de;
-  height: 100%;
-  flex-basis: 0%;
+    width: 50%;
+    background: #0fc6de;
+    height: 100%;
+    -ms-flex-preferred-size: 0%;
+    flex-basis: 0%;
 }
 
 .bottom .quality {
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  position: relative;
-  background: transparent;
-  margin-top: 2px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+    background: transparent;
+    margin-top: 2px;
 }
 
 .bottom .quality button {
-  font-size: 10px;
-  padding: 8px 4px;
-  width: 100%;
+    font-size: 10px;
+    padding: 8px 4px;
+    width: 100%;
 }
 
 .bottom .quality .qualities {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  padding-top: 10px;
-  background-color: rgba(85, 85, 85, 0.5);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    padding-top: 10px;
+    background-color: rgba(85, 85, 85, 0.5);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .bottom .quality .qualities button {
-  font-size: 11px;
-  padding: 5px 4px;
-  border-bottom: 1px solid rgba(85, 85, 85, 0.5);
-  width: 100%;
+    font-size: 11px;
+    padding: 5px 4px;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+    width: 100%;
 }
 
 .bottom .cc {
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  position: relative;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
 }
 
 .bottom .cc button {
-  font-size: 11px;
-  padding: 1px 6.5px;
-  width: 100%;
+    font-size: 11px;
+    padding: 1px 6.5px;
+    width: 100%;
 }
 
 .bottom .cc button i {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 .bottom .cc .captions {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  padding-top: 10px;
-  background-color: rgba(85, 85, 85, 0.5);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    padding-top: 10px;
+    background-color: rgba(85, 85, 85, 0.5);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .bottom .cc .captions button {
-  font-size: 6px;
-  padding: 5px 7px;
-  border-bottom: 1px solid rgba(85, 85, 85, 0.5);
-  width: 100%;
+    font-size: 6px;
+    padding: 5px 7px;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+    width: 100%;
 }
 
 .bottom .time {
-  font-size: 13px;
-  margin: 11px 5px 0px 5px;
-  font-weight: lighter;
+    font-size: 13px;
+    margin: 11px 5px 0px 5px;
+    font-weight: lighter;
 }
 
-.bottom .skip, .bottom .volume, .bottom .cc {
-  margin: 8px 0px 0px 5px;
+.bottom .skip,
+.bottom .volume,
+.bottom .cc {
+    margin: 8px 0px 0px 5px;
 }
 
 .bottom .time {
-  font-size: 10px;
+    font-size: 10px;
 }
 
 .bottom i {
-  font-size: 15px;
+    font-size: 15px;
 }
 
 .bottom .expand {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 
 .bottom .expand button {
-  padding: 0px 2px;
+    padding: 0px 2px;
 }
 
 .bottom .expand img {
-  width: 20px;
+    width: 20px;
 }
 
 .bottom .play i {
-  font-size: 24px;
-  margin-top: 7px;
+    font-size: 24px;
+    margin-top: 7px;
 }
 
 .bottom .volume {
-  position: relative;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .bottom .volume .volume-scrub {
-  display: none;
-  height: 100px;
-  padding: 37%;
-  position: absolute;
-  z-index: 1;
-  bottom: 100%;
-  background-color: rgba(85, 85, 85, 0.5);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+    display: none;
+    height: 100px;
+    padding: 37%;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    background-color: rgba(85, 85, 85, 0.5);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 .bottom .volume .volume-scrub input[type=range][orient=vertical] {
-  writing-mode: bt-lr;
-  -webkit-appearance: slider-vertical;
-  width: 4px;
-  height: 100%;
-  padding: 0 2px;
+    -webkit-writing-mode: bt-lr;
+    -ms-writing-mode: bt-lr;
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    width: 4px;
+    height: 100%;
+    padding: 0 2px;
 }
 
 .bottom .volume .volume-scrub .volume-filler {
-  position: absolute;
-  width: 10%;
-  height: 70%;
-  top: 20%;
-  left: 45%;
-  right: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  z-index: 1000;
+    position: absolute;
+    width: 10%;
+    height: 70%;
+    top: 20%;
+    left: 45%;
+    right: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1000;
 }
 
 .bottom .volume .volume-scrub .volume-filled {
-  position: absolute;
-  width: 10%;
-  height: 60%;
-  top: 20%;
-  left: 45%;
-  right: 50%;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  background-color: #0fc6de;
-  z-index: 2000;
+    position: absolute;
+    width: 10%;
+    height: 60%;
+    top: 20%;
+    left: 45%;
+    right: 50%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    background-color: #0fc6de;
+    z-index: 2000;
 }
+
 
 /*Chrome*/
+
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
-  input[type='range'] {
-    overflow: hidden;
-    width: 80px;
-    -webkit-appearance: none;
-    background-color: #9a905d;
-  }
-  input[type='range']::-webkit-slider-runnable-track {
-    height: 10px;
-    -webkit-appearance: none;
-    color: #13bba4;
-    margin-top: -1px;
-  }
-  input[type='range']::-webkit-slider-thumb {
-    width: 10px;
-    -webkit-appearance: none;
-    height: 10px;
-    cursor: pointer;
-    background: #0fc6de;
-    box-shadow: -80px 0 0 80px #0fc6de;
-  }
+    input[type='range'] {
+        overflow: hidden;
+        width: 80px;
+        -webkit-appearance: none;
+        background-color: #9a905d;
+    }
+    input[type='range']::-webkit-slider-runnable-track {
+        height: 10px;
+        -webkit-appearance: none;
+        color: #13bba4;
+        margin-top: -1px;
+    }
+    input[type='range']::-webkit-slider-thumb {
+        width: 10px;
+        -webkit-appearance: none;
+        height: 10px;
+        cursor: pointer;
+        background: #0fc6de;
+        -webkit-box-shadow: -80px 0 0 80px #0fc6de;
+        box-shadow: -80px 0 0 80px #0fc6de;
+    }
 }
 
+
 /** FF*/
+
 input[type="range"]::-moz-range-progress {
-  background-color: #0fc6de;
+    background-color: #0fc6de;
 }
 
 input[type="range"]::-moz-range-track {
-  background-color: #0fc6de;
+    background-color: #0fc6de;
 }
 
+
 /* IE*/
+
 input[type="range"]::-ms-fill-lower {
-  background-color: #0fc6de;
+    background-color: #0fc6de;
 }
 
 input[type="range"]::-ms-fill-upper {
-  background-color: #0fc6de;
-}
-
-.player:fullscreen {
-  max-width: 100%;
-  width: 100%;
-  height: 100vh;
+    background-color: #0fc6de;
 }
 
 .player:-webkit-full-screen {
-  max-width: 100%;
-  width: 100%;
-  height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+.player:-moz-full-screen {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+.player:-ms-fullscreen {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+.player:fullscreen {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+.player:-webkit-full-screen {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
 }
 
 video::-webkit-media-controls-enclosure {
-  display: none !important;
+    display: none !important;
 }
 
 video::-webkit-media-controls {
-  display: none !important;
+    display: none !important;
 }
 
 .right {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .videos {
-  z-index: 2995;
-  padding: 10px;
-  background: #d1d3d4;
-}
-
-.videos .nowplaying {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.videos .nowplaying .propic {
-  width: 20%;
-}
-
-.videos .nowplaying .propic img {
-  width: 98%;
-  border-radius: 5px;
-  border: 0.5px solid #999;
-}
-
-.videos .nowplaying .desc {
-  width: 40%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  font-size: 14px;
-  padding: 2px 4px;
-}
-
-.videos .nowplaying .desc .name {
-  font-size: 14px;
-  font-weight: bold;
-  color: #606060;
-}
-
-.videos .nowplaying .desc .sub {
-  color: #606060;
-  font-size: 12px;
-}
-
-.videos .nowplaying .social {
-  padding: 2px;
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.videos .nowplaying .social .title {
-  color: #606060;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.videos .nowplaying .social .buttons {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-.videos .nowplaying .social .buttons button.thumb {
-  padding: 2px 7px;
-  margin: 3px;
-  border-radius: 5px;
-  border: 0.5px solid #d1d3d4;
-  background: #0fc6de;
-  outline: none;
-}
-
-.videos .nowplaying .social .buttons button.thumb i {
-  font-size: 15px;
-  color: white;
-}
-
-.videos .nowplaying .social .buttons button {
-  padding: 2px 7px;
-  margin: 3px;
-  border-radius: 5px;
-  border: 0.5px solid #d1d3d4;
-  background: #0fc6de;
-  outline: none;
-}
-
-.videos .nowplaying .social .buttons button i {
-  font-size: 15px;
-  color: white;
-}
-
-.videos .videolist {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-  padding: 10px 5px;
-  border: 1px solid #a7a9ac;
-  border-radius: 5px;
-}
-
-.videos .videolist .video-file {
-  position: relative;
-  align-self: center;
-  width: 48%;
-}
-
-.videos .videolist .video-file img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.videos .videolist .video-file img:hover {
-  cursor: pointer;
-}
-
-.videos .videolist .video-file p {
-  color: #606060;
-  font-size: 11px;
-}
-
-.videos .videolist .video-file .songtitle {
-  margin-bottom: 10px;
-}
-
-.videos .videolist .video-file .songtime {
-  color: white;
-  font-size: 10px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  background: #606060;
-  padding: 3px 6px;
-  border-radius: 5px;
-}
-
-.videos .videolist .video-file .artiste {
-  font-weight: bold;
-}
-
-@media screen and (min-width: 600px) {
-  .player {
-    max-width: 60%;
-    margin: 0 auto;
-  }
-  .stick {
-    width: 60%;
-    margin: 0 auto;
-  }
-  .videos {
-    max-width: 80%;
-    margin: 0 auto;
     z-index: 2995;
     padding: 10px;
     background: #d1d3d4;
-  }
-  .videos .nowplaying {
-    padding: 30px;
-  }
-  .videos .nowplaying .desc {
-    font-size: 24px;
-    padding: 2px 4px;
-  }
-  .videos .nowplaying .desc .name {
-    font-size: 24px;
-  }
-  .videos .nowplaying .desc .sub {
-    font-size: 22px;
-  }
-  .videos .nowplaying .social {
-    padding: 2px;
-  }
-  .videos .nowplaying .social .title {
-    font-size: 24px;
-  }
-  .videos .nowplaying .social .buttons button.thumb {
-    padding: 8px 16px;
-  }
-  .videos .nowplaying .social .buttons button.thumb i {
-    font-size: 25px;
-    color: white;
-  }
-  .videos .nowplaying .social .buttons button {
-    padding: 8px 17px;
-  }
-  .videos .nowplaying .social .buttons button i {
-    font-size: 25px;
-  }
-  .videos .videolist .video-file {
-    width: 30%;
-  }
 }
- 
 
- /*# sourceMappingURL= style.css.map */
+.videos .nowplaying {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.videos .nowplaying .propic {
+    width: 20%;
+}
+
+.videos .nowplaying .propic img {
+    width: 98%;
+    border-radius: 5px;
+    border: 0.5px solid #999;
+}
+
+.videos .nowplaying .desc {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    font-size: 14px;
+    padding: 2px 4px;
+}
+
+.videos .nowplaying .desc .name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #606060;
+}
+
+.videos .nowplaying .desc .sub {
+    color: #606060;
+    font-size: 12px;
+}
+
+.videos .nowplaying .social {
+    padding: 2px;
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.videos .nowplaying .social .title {
+    color: #606060;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.videos .nowplaying .social .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.videos .nowplaying .social .buttons button.thumb {
+    padding: 2px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 0.5px solid #d1d3d4;
+    background: #0fc6de;
+    outline: none;
+}
+
+.videos .nowplaying .social .buttons button.thumb i {
+    font-size: 15px;
+    color: white;
+}
+
+.videos .nowplaying .social .buttons button {
+    padding: 2px 7px;
+    margin: 3px;
+    border-radius: 5px;
+    border: 0.5px solid #d1d3d4;
+    background: #0fc6de;
+    outline: none;
+}
+
+.videos .nowplaying .social .buttons button i {
+    font-size: 15px;
+    color: white;
+}
+
+.videos .videolist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #a7a9ac;
+    border-radius: 5px;
+}
+
+.videos .videolist .video-file {
+    position: relative;
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 48%;
+}
+
+.videos .videolist .video-file img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.videos .videolist .video-file img:hover {
+    cursor: pointer;
+}
+
+.videos .videolist .video-file p {
+    color: #606060;
+    font-size: 11px;
+}
+
+.videos .videolist .video-file .songtitle {
+    margin-bottom: 10px;
+}
+
+.videos .videolist .video-file .songtime {
+    color: white;
+    font-size: 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background: #606060;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.videos .videolist .video-file .artiste {
+    font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+    .player {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    .stick {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .videos {
+        max-width: 80%;
+        margin: 0 auto;
+        z-index: 2995;
+        padding: 10px;
+        background: #d1d3d4;
+    }
+    .videos .nowplaying {
+        padding: 30px;
+    }
+    .videos .nowplaying .desc {
+        font-size: 24px;
+        padding: 2px 4px;
+    }
+    .videos .nowplaying .desc .name {
+        font-size: 24px;
+    }
+    .videos .nowplaying .desc .sub {
+        font-size: 22px;
+    }
+    .videos .nowplaying .social {
+        padding: 2px;
+    }
+    .videos .nowplaying .social .title {
+        font-size: 24px;
+    }
+    .videos .nowplaying .social .buttons button.thumb {
+        padding: 8px 16px;
+    }
+    .videos .nowplaying .social .buttons button.thumb i {
+        font-size: 25px;
+        color: white;
+    }
+    .videos .nowplaying .social .buttons button {
+        padding: 8px 17px;
+    }
+    .videos .nowplaying .social .buttons button i {
+        font-size: 25px;
+    }
+    .videos .videolist .video-file {
+        width: 30%;
+    }
+}
