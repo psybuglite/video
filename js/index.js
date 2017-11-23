@@ -184,7 +184,7 @@ function videoScrub(e) {
 }
 
 function refreshIcon() {
-    play.innerHTML = '<i class="material-icons">refresh</i>'
+    play.innerHTML = '<i class="fa fa-refresh"></i>'
 }
 
 function skip() {
@@ -199,10 +199,11 @@ window.onscroll = function() {
     var y = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     if (y >= ph && window.innerWidth <= 600) {
         player.className = 'stick';
-        console.log("its working");
+        videolist.style.marginTop = "190px";
     } else {
         player.classList.add('player');
         player.classList.remove('stick');
+        videolist.style.marginTop = "0px";
     }
 };
 
@@ -213,7 +214,7 @@ function playStar() {
     video.pause();
     setTimeout(function() {
 
-        source.setAttribute('src', 'vid/star_wars.mp4');
+        video.setAttribute('src', 'vid/star_wars.mp4');
         mainpic.setAttribute("src", "img/starwars.jpg");
         title.innerHTML = "Force Awakens";
         subs.innerHTML = "99853";
@@ -228,7 +229,7 @@ function playEd() {
     video.pause();
     setTimeout(function() {
 
-        source.setAttribute('src', 'vid/Edsheeran.mp4');
+        video.setAttribute('src', 'vid/Edsheeran.mp4');
         mainpic.setAttribute("src", "img/edpropic.jpg");
         title.innerHTML = "Shape Of You";
         subs.innerHTML = "38939";
