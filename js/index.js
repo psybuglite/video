@@ -33,6 +33,7 @@ const subs = videolist.querySelector(".subs");
 const name = videolist.querySelector(".name");
 const title = videolist.querySelector(".title");
 const source = player.querySelector("source");
+const playicon = player.querySelector(".playicon");
 
 
 //create the funtions that will work
@@ -48,8 +49,10 @@ function togglePlay() {
     //console.log(video.currentTime)
     if (video.paused) {
         bottom.style.visibility = "hidden";
+        playicon.style.visibility = "visible";
     } else {
         bottom.style.visibility = "visible";
+        playicon.style.visibility = "hidden";
     }
 }
 
@@ -254,6 +257,7 @@ player.addEventListener("mouseleave", translate2);
 bottom.addEventListener("mouseleave", translate2);
 video.addEventListener("dblclick", resize);
 video.addEventListener("click", togglePlay);
+playicon.addEventListener("click", togglePlay);
 video.addEventListener("play", playIcons);
 video.addEventListener("pause", playIcons);
 play.addEventListener("click", togglePlay);

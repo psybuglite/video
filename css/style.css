@@ -78,6 +78,19 @@ nav .logo img {
     position: relative;
 }
 
+.playicon {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 45%;
+    text-align: center;
+}
+
+.playicon i {
+    font-size: 25px;
+    color: white;
+}
+
 .bottom {
     z-index: 2900;
     padding: 4px;
@@ -87,8 +100,6 @@ nav .logo img {
     position: absolute;
     bottom: 0;
     width: 100%;
-    -webkit-transition: all .9s;
-    transition: all .9s;
     color: black;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -96,6 +107,7 @@ nav .logo img {
     -ms-flex-line-pack: cemter;
     align-content: cemter;
     background: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
 }
 
 .bottom button {
