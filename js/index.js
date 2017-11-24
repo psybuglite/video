@@ -222,7 +222,7 @@ function playStar() {
     video.pause();
     setTimeout(function() {
 
-        video.setAttribute('src', 'vid/star_wars.mp4');
+        video.setAttribute('src', 'http://res.cloudinary.com/psybug/video/upload/v1511514126/star_wars_kmgfcn.mp4');
         mainpic.setAttribute("src", "img/starwars.jpg");
         title.innerHTML = "Force Awakens";
         subs.innerHTML = "99853";
@@ -238,7 +238,7 @@ function playEd() {
     video.pause();
     setTimeout(function() {
 
-        video.setAttribute('src', 'vid/Edsheeran.mp4');
+        video.setAttribute('src', 'http://res.cloudinary.com/psybug/video/upload/v1511514126/Edsheeran_kj9k6f.mp4');
         mainpic.setAttribute("src", "img/edpropic.jpg");
         title.innerHTML = "Shape Of You";
         subs.innerHTML = "38939";
