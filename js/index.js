@@ -46,6 +46,11 @@ function togglePlay() {
     const method = video.paused ? "play" : "pause";
     video[method]();
     //console.log(video.currentTime)
+    if (video.paused) {
+        bottom.style.visibility = "hidden";
+    } else {
+        bottom.style.visibility = "visible";
+    }
 }
 
 function volumeUpdate() {
