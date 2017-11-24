@@ -224,7 +224,7 @@ function playStar() {
 
         video.setAttribute('src', 'http://res.cloudinary.com/psybug/video/upload/v1511514126/star_wars_kmgfcn.mp4');
         mainpic.setAttribute("src", "img/starwars.jpg");
-        title.innerHTML = "Force Awakens";
+        title.innerHTML = "The last Jedi";
         subs.innerHTML = "99853";
         name.innerHTML = "Star Wars";
         video.load();
