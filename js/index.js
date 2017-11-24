@@ -229,7 +229,8 @@ function playStar() {
         name.innerHTML = "Star Wars";
         video.load();
         video.play();
-    }, 2000);
+        playicon.style.visibility = "hidden";
+    }, 1000);
 }
 
 function playEd() {
@@ -244,7 +245,8 @@ function playEd() {
         name.innerHTML = "Ed Sheeran";
         video.load();
         video.play();
-    }, 2000);
+        playicon.style.visibility = "hidden";
+    }, 1000);
 }
 
 //console.log(video.timeUpdate)

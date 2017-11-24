@@ -570,6 +570,25 @@ video::-webkit-media-controls {
     font-weight: bold;
 }
 
+.videos .videolist .video-file .details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.videos .videolist .video-file .details button {
+    padding: 2px 15px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: #0fc6de;
+    font-size: 11px;
+    outline: none;
+}
+
 @media screen and (min-width: 600px) {
     .player {
         max-width: 60%;
