@@ -6,7 +6,7 @@
 
 ### SETUP ###
 
-* Nothing required for set up. Just clone and open the HTML file in your browser
+* Nothing required for set up. Just clone and open the HTML file in your browser. You can see the live version [here](https://psybuglite.github.io/video)
 
 ### Contribution ###
 
